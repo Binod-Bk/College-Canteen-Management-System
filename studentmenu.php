@@ -59,9 +59,21 @@ include('include/header.php');
                        Price (Rs.): <input type="text" value="<?php echo $row['Price'];  ?> " name="price" readonly="readonly"><br>
                         <input type="text" value="<?php echo $row['Quantity']; ?>" name="quantity" readonly="readonly"><br>
                         Available Quantity:  <input type="number" value="<?php echo $row['stock']; ?>" readonly="readonly"><br>
+                        <?php
+                        if($row['stock']==0){
+                            ?>
+                            <!-- <input type="text" placeholder="Out Of Stock" readonly="readonly"><br><br> -->
+                            <br>
+                            <p> &nbsp;&nbsp;&nbsp;  Food is out of Stock. </p>
+                            <br>
+                            <?php
+                        }else{ 
+                            ?>
                        For ordering now. Enter the quantity.
                         <input type="number" name="order" min="0" oninput="validity.valid||(value='');" max="<?php echo $row['stock'];  ?>">
                         <br><br>
+                        <?php } ?>
+                        
                         <input type="submit" value="Order Now" class="but">
                         </form>
                     </div>
