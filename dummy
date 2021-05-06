@@ -1,0 +1,144 @@
+<?php
+
+include('include/adminheader.php');
+
+?>
+
+<div class="container py-5">
+    <div class="row mt-4">
+
+    <?php
+    include('db/connection.php');
+    $q = "SELECT * FROM foodItems " ;
+    $result =$conn->query($q);
+    if($result->num_rows==1){
+        while($row=$result->fetch_assoc())
+        {
+            ?>
+            <div class="col-md-3 mt-3" >
+                <div class="card">
+                    <img src="img/ <?php echo $row['photo']; ?>" height="200px" width="200px">
+                    <div class="card-body">
+                        <h5 class="card-title" name="name"> <?php echo $row['name'];  ?> </h5>
+                        <h5 class="card-title" name="price"> <?php echo $row['price'];  ?> </h5>
+                        <h5 class="card-title" name="quantity"> <?php echo $row['quantity']; ?> </h5>
+                    </div>
+                </div>
+            </div>
+        }
+    }else{
+        echo "NO data found";
+    }
+    </div> 
+</div>
+
+
+
+
+<a class="nav-link" aria-current="page" href="#">Home |</a>
+        <a class="nav-link" href="setfooditems.php">Set Food Items |</a>
+        <a class="nav-link" href="setmenu.php">Set Menu |</a>
+        <a class="nav-link" href="Menu.php"> Menu |</a>
+        <a class="nav-link" href="#">See Orders |</a>
+        <a class="nav-link" href="aboutus.html">About Us |</a>
+        <a class="nav-link" href="contact.html">Contact Us |</a>
+
+
+
+
+
+        <?php
+
+include('include/header.php');
+
+
+// // session_start();
+// // if(!isset($_SESSION['user'])){
+// // 	header('location:login.html');
+// }
+
+
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style >
+    body{
+        background: #4682BF;
+    }
+    
+    .img{
+        display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 65%;
+    }
+    .but{
+        background:blue;
+        color:white;
+        display: block;
+  margin-left: auto;
+  margin-right: auto;
+    }
+    .mydiv{
+        left:40%;
+    }
+    </style>
+</head>
+<body>
+    
+
+
+<div class="container py-5">
+    <div class="row mt-4">
+
+    <?php
+    
+    include('db/connection.php');
+    session_start();
+    $id=$_SESSION['loginuser'];
+    $q = "SELECT * FROM stuorder WHERE id='$id' " ;
+    $result = $conn->query($q);
+    if($result-> num_rows > 0){
+        while($row=$result->fetch_assoc())
+        {
+            ?>
+            <div class="mydiv">
+            <div class="col-md-3 mt-3" >
+                <div class="card bg-dark text-white">
+                    <fieldset border="1px solid white " > 
+                        <legend>My Order.</legend>
+                    <form action="process/profilestudent.php" Method="POST">
+                    
+                    <div class="card-body">
+                   
+                    Food Name:<input type="text" name="Fullname"  id="name" value="<?php echo $row['Oname']; ?>"><br><br>
+    Price: <br><input type="integer" name="Contact" id="number" value="<?php echo $row['Price']; ?>"><br><br>
+    Quantity:<input type="E-mail" name="Email"  id="name" value="<?php echo $row['Quantity']; ?>"><br><br>
+    My order:<input type=password name='password' value="<?php echo $row['studentOrder']; ?>"><br><br>
+
+ 
+	       
+
+	      <br><br>
+           <input type="submit" value="Get Bill" class="but">
+                    </div>
+                    </form>
+        </fieldset>
+                </div>
+            </div>
+            <?php
+        }
+    }else{
+        echo "No data found";
+    }
+    ?>
+    </div> 
+</div>
+</div>
+</body>
+</html>

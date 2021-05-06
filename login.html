@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		body{
+			background-color:  #FFFEF2;
+			background-image: url(img/q12.png);
+			background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+			
+			font-size: 23px;
+			max-height: 1345px;
+			color: black;
+			background-repeat: no-repeat;
+		}
+		/*form{
+			width: 40%;
+			height: 50%;
+	        position:fixed;
+	        left: 655px;
+	        top:150px;
+	        
+		}*/
+		.button{
+			 height: 11%;
+            width: 20%;
+           float: right;
+            border: black;
+ 			padding:0px 0px;
+            
+  			font-size: 23px;
+  			cursor: pointer;
+		}
+		.A{
+			height: 11%;
+			width: 40%;
+		}
+		.btn {
+		  
+           background-color: #ff817e;
+           color: #fff;
+           font-size: 26px;
+           text-transform: uppercase;
+           padding: 20px 15px;
+}
+       a:hover{
+         	background-color:black;
+			 color: white;
+         }
+         .forgot{
+         	font-size: 23px;
+         }
+         .field{
+         	margin-left: 5%;
+         	margin-top: 100px;
+         	width: 40%;
+         	height: 350px;
+         	background-color:  rgba(0,0,0,0.3);
+			 color: white;
+         }
+
+       
+		 a{
+			 text-decoration: none;
+			 color: black;
+		 }
+         
+		 h2{
+			text-align: center;
+			color: white;
+		 }
+
+
+
+
+         	
+
+	</style>
+</head>
+<body>
+
+<div>
+	<h2>College Canteen Management System</h2>
+</div>
+
+
+
+	<div class="field">
+	<fieldset class="fieldset" border="6px" height="200px"   border-color="black">
+		<legend class="legend"> <h2>Login</h2></legend>
+	<form action='process/loginprocess.php' method="post" >
+		
+		Username : <input type=text  class="A" name="user" placeholder="Fullname" required>
+		<br>Password : <input type=password class="A" name="pass" placeholder="Password" required><br>
+		
+		Select User : <select name="usertype">
+			<option value="Student">Student</option>
+			<option value="Admin">Admin</option>
+			
+		</select> <br>
+		<input type="submit" name="Login" value="Login">
+    <p class="forgot">
+		Did you forgot your password? <a href="forgot.html">Click Me</a><br><br>
+		Create New Account. <a href="signup.html">Click Me</a>
+		</p>
+	</form>
+	</fieldset>
+            </div>            
+
+</body>
+</html>

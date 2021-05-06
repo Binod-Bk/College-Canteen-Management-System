@@ -1,0 +1,63 @@
+body{
+    background: #4682BF;
+}
+
+.img{
+    display: block;
+margin-left: auto;
+margin-right: auto;
+width: 65%;
+}
+.but{
+    background:blue;
+    color:white;
+    display: block;
+margin-left: auto;
+margin-right: auto;
+}
+.mydiv{
+    width: 1000px;
+    background: black;
+    color:white;
+}
+.mya{
+    background:white;
+    text-decoration:none;
+    color:black;
+}
+form{
+    width:1200px;
+    background:grey;
+    font-weight:bold;
+    float:right;
+    
+}
+.mytd{
+    text-align:center;
+}
+table{
+    width:1000px;
+    border: 2px solid black;
+}
+th{
+    font-size:18px;
+    text-align:center;
+    border: 2px solid black;
+}
+input{
+    color:white;
+    width: 100px;
+    background:black;
+}
+.submit{
+    background:green;
+}
+h3{
+    text-align:center;
+    color:yellow;
+    
+}
+td{
+    color:white;
+    text-align:center;
+}
