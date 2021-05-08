@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+# College-Canteen-Management-System
+
+>>>>>>> f20f61e34e55e51d7dd74e2b60fd7dd9cfdbef31
 It is the system that is built for two entities student and canteen associated with a college.
 Use this system, student can see the menu set by canteen and order food and get the generated bill of the ordered food.
 In the other hand, canteen can view the order placed by student and serve food.

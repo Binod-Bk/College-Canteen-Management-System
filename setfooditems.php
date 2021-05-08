@@ -55,23 +55,32 @@
 <div class="field">
 	<fieldset class="fieldset" >
 		<legend class="legend"> <h2>Add Food Items</h2> </legend>
-	<form action='process/foodprocess.php' method="post" >
+	<form action='process/foodprocess.php' method="post" name="myForm" onsubmit="return validateForm()">
 		
-		Name : <input type=text  class="A" name="name" placeholder="Enter Food Name" required><br><br>
-		Price (Rs.) : <input type=number class="A" min="0" oninput="validity.valid||(value='');" name="price" placeholder="Enter the Price" required><br><br>
+		Name : <input type=text  class="A" name="name" placeholder="Enter Food Name" pattern="[A-Za-z]" title="Name must be in alphabet."><br><br>
+		Price (Rs.) : <input type=number class="A" min="0" oninput="validity.valid||(value='');" name="price" placeholder="Enter the Price" ><br><br>
 		Quantity : <select name="quantity">
 			<option value="per plate">per plate</option>
             <option value="per piece">per piece</option>
             <option value="per cup">per cup</option>
         </select> <br><br>
-        Photo : <input type="file" name="photo" required> <br><br>
+        Photo : <input type="file" name="photo" > <br><br>
         <input type="submit" name="Login" value="Submit">
         <input type="reset" name="Login" value="Reset">
 
 	</form>
 	</fieldset>
             </div> 
-
+            <script>
+            function validateForm() {
+        var x = document.forms["myForm"]["name"].value;
+        if (x == "") {
+         alert("Name of the food must be filled out");
+            return false;
+                
+  }
+}
+</script>
 
 
     

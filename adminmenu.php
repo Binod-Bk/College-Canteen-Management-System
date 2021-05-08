@@ -13,6 +13,9 @@ include('include/adminheader.php');
     <style >
     body{
         background: #4682BF;
+        position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
     }
     
     .img{
@@ -29,6 +32,7 @@ include('include/adminheader.php');
   margin-left: auto;
   margin-right: auto;
     }
+  
     
     </style>
 </head>
@@ -48,7 +52,7 @@ include('include/adminheader.php');
         while($row=$result->fetch_assoc())
         {
             ?>
-            <div class="col-md-3 mt-3" >
+            <div class="col-md-3 mt-3 binod " >
                 <div class="card">
                     <form action="process/deletemenuprocess.php" Method="POST">
                     <img src="img/<?php echo $row['Photo']; ?>" height="200px" width="200px" value="photo" class="img"><br>
