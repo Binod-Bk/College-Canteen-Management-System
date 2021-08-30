@@ -1,12 +1,25 @@
 <?php
 
 include('../db/connection.php');
+if($_SERVER['REQUEST_METHOD']=='POST'){
+	if(isset($_POST['user']) && !empty($_POST['user'])){
+		$user=$_POST['user'];
+	}else{
+		$msg = "Please Enter your Email address.";
+		errorMsg($msg);
+	}
 
-$user=$_POST['user'];
-$pass=$_POST['pass'];
-$usertype=$_POST['usertype'];
+	if(isset($_POST['pass']) && !empty($_POST['pass'])){
+		$pass=$_POST['pass'];
+	}else{
+		$msg = "Please Enter your Password.";
+		errorMsg($msg);
+	}
 
-
+    $usertype=$_POST['usertype'];
+	if(isset($msg)){
+		errorMsg($msg);
+	}else{
 if($usertype =="Admin"){
 	$q1 ="SELECT * FROM admin  " ;
 	$result =$conn->query($q1);
@@ -16,7 +29,7 @@ if($usertype =="Admin"){
 			header('Location: ../adminhome.php');
 		}else{
 			echo "<script> alert('Check Your Credentials . ');  
-			window.location.href='../login.html';</script> " ;
+			window.location.href='../login.php';</script> " ;
 		}
 	}
 }else{
@@ -33,11 +46,21 @@ if($usertype =="Admin"){
 			
 		}else{
 			echo "<script> alert('Check Your Credentials . ');  
-			window.location.href='../login.html';</script>
+			window.location.href='../login.php';</script>
 			";
 		}
+	
+
+	}else{
+				echo "<script> alert('No any register user with the Email.');  
+			window.location.href='../login.php';</script> " ;
+	}
+}
 
 	}
+}
+function errorMsg($msg){
+	header('Location:../login.php?msg='.$msg);
 }
 
 ?>

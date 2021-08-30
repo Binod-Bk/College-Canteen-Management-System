@@ -3,9 +3,9 @@
 include('include/header.php');
 
 
-// // session_start();
-// // if(!isset($_SESSION['user'])){
-// // 	header('location:login.html');
+// session_start();
+// if(!isset($_SESSION['user'])){
+// 	header('Location:login.php');
 // }
 
 
@@ -38,12 +38,38 @@ include('include/header.php');
     .mydiv{
         left:40%;
     }
+    .container{
+        margin-top:-70px;
+        margin-left:40%;
+        
+
+    }
+    .error{
+		background:red;
+		/* padding:10px; */
+		width:30%;
+		color:white;
+		border-radius:10px;
+		height:30px;
+		text-align:center;	
+	}
+    .system{
+        margin-top:50px;
+        text-align:center;
+        font-weight:bold;
+    }
+   
     </style>
 </head>
 <body>
     
-
-
+<h2 class='system'>College Canteen Management System</h2>
+<?php 
+	if(isset($_GET['msg'])){ ?>
+	<div class="error">
+		<?php echo $_GET['msg']; ?>
+	</div>
+	<?php } ?>
 <div class="container py-5">
     <div class="row mt-4">
 
@@ -62,15 +88,15 @@ include('include/header.php');
             <div class="col-md-3 mt-3" >
                 <div class="card bg-dark text-white">
                     <fieldset border="1px solid white " > 
-                        <legend>My Profile.</legend>
+                        <legend>-_-_- My Profile -_-_-_</legend>
                     <form action="process/profilestudent.php" Method="POST">
                     
                     <div class="card-body">
                    
-                    Fullname:<input type="text" name="Fullname"  id="name" value="<?php echo $row['Name']; ?>" required><br><br>
-    Contact:<input type="integer" name="Contact" id="number" value="<?php echo $row['Contact']; ?>" required><br><br>
-    E-mail:<input type="E-mail" name="Email"  id="name" value="<?php echo $row['Email']; ?>" required><br><br>
-    Password:<input type=password name='password' value="<?php echo $row['Password']; ?>" required><br><br>
+                    Fullname:<input type="text" name="Fullname"  id="name" value="<?php echo $row['Name']; ?>"><br><br>
+    Contact:<input type="integer" name="Contact" id="number" value="<?php echo $row['Contact']; ?>" ><br><br>
+    E-mail:<input type="E-mail" name="Email"  id="name" value="<?php echo $row['Email']; ?>" ><br><br>
+    Password:<input type=password name='password' value="<?php echo $row['Password']; ?>" ><br><br>
 
 <label for ="Subjects">Choose your semester:</label>
 	<select name="semester">
@@ -118,16 +144,15 @@ include('include/header.php');
 	       	 </optgroup> 
 	       	</select>
 	       	<br><br>
-	       	Security Question:<select name="Security" value="<?php echo $row['Question']; ?>">
-	       		<option> What is your Nickname??  </option>
-	       		<option>What is your Father's name?? </option>
-	       		<option> What is your Favourite Game?? </option>
-	       		
-	       		<option> What is your Mother's name?? </option>
+	       	Security Question:<select name="Security" ?>">
+	       		<option <?php if($row['Question']=="What is your Nickname??") echo 'selected="selected"'; ?> > What is your Nickname??  </option>
+	       		<option <?php if($row['Question']=="What is your Father's name??") echo 'selected="selected"'; ?>>What is your Father's name?? </option>
+	       		<option <?php if($row['Question']=="What is your Favourite Game??") echo 'selected="selected"'; ?>> What is your Favourite Game?? </option>
+	       		<option <?php if($row['Question']=="What is your Mother's name??") echo 'selected="selected"'; ?>> What is your Mother's name?? </option>
 	       	</select> <br><br>
 	       
 
-	       Your Answer: <input type="text" name="ans" value="<?php echo $row['Ans']; ?>" required> <br><br>
+	       Your Answer: <input type="text" name="ans" value="<?php echo $row['Ans']; ?>" > <br><br>
            <input type="submit" value="Update Data" class="but">
                     </div>
                     </form>

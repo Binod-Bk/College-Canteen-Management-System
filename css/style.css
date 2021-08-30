@@ -1,9 +1,5 @@
 
-*{
-            margin: 0;
-            padding: 0;
-            font-family: Century Gothic ;
-        }
+
 
          .creator{
             float: center;
@@ -12,10 +8,10 @@
             text-align: center;
         }
         
-        .container{
-            position: absolute;
+        /* .container{
+            position: relative;
             color: white;
-        }
+        } */
 
         .primary-menu{
             position: relative;
@@ -37,32 +33,4 @@
 
         }
         
-        ul{
-            list-style-type: none;
-            float: right;
-            margin-top: 20px;
-            background-color: rgba(0,0,0,0.7);
-
-        }
-        ul li{
-            display:inline-block;
-            text-align: center;
-            line-height: 40px;
-            text-align: center;
-        }
-        ul li a{
-            text-decoration: none;
-            color:white;
-            padding: 5px 20px;
-            border: 1px solid transparent;
-            transition: 0.6s ease ;
-        }
-        ul li a:hover{
-            background-color: white;
-            color: black;
-        }
-        
-        
-        
        
-        

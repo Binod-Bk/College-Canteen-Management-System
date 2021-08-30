@@ -1,6 +1,6 @@
 <?php
 
-include('include/orderheader.php');
+include('include/seeorder.php');
 
 ?>
 
@@ -84,9 +84,9 @@ include('include/orderheader.php');
     // echo "<pre>";
     // print_r($_SESSION);
     // echo "</pre>";exit;
-    $mysid = $_SESSION['loginuser'];
+    
     include('db/connection.php');
-    $q = "SELECT * from history WHERE sid ='$mysid' ORDER BY date_ordered DESC";
+    $q = "SELECT * from history  ORDER BY date_ordered DESC";
     if ($conn->query($q)){
     $result = $conn->query($q);
     
@@ -100,6 +100,8 @@ include('include/orderheader.php');
 
             <table>
                 <tr>
+                    <th>Student Name</th>
+                    <th>Semester</th>
                     <th>Food Name</th>
                     <th>Food Ordered</th>
                     <th>Date Ordered</th>
@@ -108,6 +110,8 @@ include('include/orderheader.php');
                 <?php while($row=$result->fetch_assoc())
         {  ?>
                 <tr>
+                <td><?php echo $row['student_name'];  ?></td>
+                <td><?php echo $row['semester'];  ?></td>
                 <td><?php echo $row['food_name'];  ?></td>
                 <td><?php echo $row['quantity'];  ?></td>
                 <td><?php echo $row['date_ordered'];  ?></td>

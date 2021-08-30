@@ -9,7 +9,7 @@ include('include/header.php');
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>C C M S</title>
     <style >
     body{
         background:#008080;
@@ -37,8 +37,8 @@ include('include/header.php');
     
 
 
-<div class="container py-5">
-    <div class="row mt-4">
+<div class="container py-4">
+    <div class=" row mt-4">
 
     <?php
     
@@ -49,7 +49,7 @@ include('include/header.php');
         while($row=$result->fetch_assoc())
         {
             ?>
-            <div class="col-md-3 mt-3" >
+            <div class="col-md-3 mt-3 " >
                 <div class="card align-center bg-info">
                     <form action="process/orderfoodprocess.php" Method="POST">
                     <img src="img/<?php echo $row['Photo']; ?>" height="200px" width="200px" value="photo"class="img" ><br>

@@ -1,6 +1,6 @@
 <?php
 
-include('include/adminheader.php');
+include('include/seeorder.php');
 
 ?>
 

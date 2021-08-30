@@ -1,0 +1,28 @@
+
+body  {
+        background-color: #B19CD9;
+        color:black;
+    } 
+h4{
+        margin-left:100px;
+        top:0px;
+        color:rgb(235, 63, 63);
+        text-align:center;
+    }
+pre{
+        color:rgb(224, 222, 228);
+        text-align:center;
+    }
+.goal{
+        text-align: center;
+        color: lightcoral;
+    }
+
+    
+.navbar{
+        overflow: hidden;
+        position:fixed;
+        top:0px;
+        width: 100%;
+      }
+

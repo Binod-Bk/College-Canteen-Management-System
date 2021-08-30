@@ -72,6 +72,16 @@
 			color: white;
 		 }
 
+		 .error{
+		background:red;
+		/* padding:10px; */
+		width:30%;
+		color:white;
+		border-radius:10px;
+		height:30px;
+		text-align:center;	
+	}
+
 
 
 
@@ -81,29 +91,29 @@
 </head>
 <body>
 
-<div>
 	<h2>College Canteen Management System</h2>
-</div>
 
+<?php 
+	if(isset($_GET['msg'])){ ?>
+	<div class="error">
+		<?php echo $_GET['msg']; ?>
+	</div>
+	<?php } ?>
 
 
 	<div class="field">
 	<fieldset class="fieldset" border="6px" height="200px"   border-color="black">
-		<legend class="legend"> <h2>Login</h2></legend>
+		<legend class="legend"> <h2>Student _ Login</h2></legend>
 	<form action='process/loginprocess.php' method="post" >
 		
-		Username : <input type=text  class="A" name="user" placeholder="Fullname" required>
-		<br>Password : <input type=password class="A" name="pass" placeholder="Password" required><br>
+		Email : <input type=text  class="A" name="user" placeholder="Fullname" >
+		<br>Password : <input type=password class="A" name="pass" placeholder="Password" ><br>
 		
-		Select User : <select name="usertype">
-			<option value="Student">Student</option>
-			<option value="Admin">Admin</option>
-			
-		</select> <br>
+		<input type="hidden" value="Student"><br>
 		<input type="submit" name="Login" value="Login">
     <p class="forgot">
-		Did you forgot your password? <a href="forgot.html">Click Me</a><br><br>
-		Create New Account. <a href="signup.html">Click Me</a>
+		Did you forgot your password? <a href="forgot.php">Click Me</a><br><br>
+		Create New Account. <a href="signup.php">Click Me</a>
 		</p>
 	</form>
 	</fieldset>

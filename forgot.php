@@ -78,26 +78,36 @@
              font-size: 18px;
          }
 
-
-
-
-         	
+		 .error{
+		background:red;
+		/* padding:10px; */
+		width:30%;
+		color:white;
+		border-radius:10px;
+		height:30px;
+		text-align:center;	
+	}
 
 	</style>
 </head>
 <body>
 
-<div>
-	<h2>College Canteen Management System</h2>
-</div>
 
+	<h2>College Canteen Management System</h2>
+
+<?php 
+	if(isset($_GET['msg'])){ ?>
+	<div class="error">
+		<?php echo $_GET['msg']; ?>
+	</div>
+	<?php } ?>
 
 
 	<div class="field">
 	<fieldset class="fieldset" border="6px" height="120px"   border-color="black">
 		<legend class="legend"> <h2>Forgot Password</h2></legend>
     <form action='process/forgotprocess.php' method="post" >
-        Enter Your Email: <input type="text" name="email" required>
+        Enter Your Email: <input type="text" name="email" >
 		<br>
 		Your Security Question : <select name="Security" value="Security Question">
             <option> What is your Nickname??  </option>
@@ -106,7 +116,7 @@
             
             <option> What is your Mother's name?? </option>
         </select>
-		<br>Answer : <input type=password class="A" name="ans" placeholder="Enter Your Answer" required><br>
+		<br>Answer : <input type=text class="A" name="ans" placeholder="Enter Your Answer" ><br>
 		
 		 <br>
 		<input type="submit" name="Login" value="Retrieve Password">

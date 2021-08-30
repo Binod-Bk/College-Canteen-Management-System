@@ -41,7 +41,7 @@ ul{
    ul li{
        background-color:black;
        float: left;
-       width: 180px;
+       width: 165px;
        height: 30px;
        color: white;
        
@@ -86,7 +86,7 @@ ul{
   <body>
     
 
-      <div class="main fixed-top">
+      <div class="main">
             
             <ul> 
               <li><a href="adminhome.php">Home </a></li>
@@ -94,8 +94,9 @@ ul{
               <li><a href="setmenu.php"> Set Menu </a></li>
               <li><a href="adminmenu.php">Menu </a></li>
               <li><a href="seeorder.php">See Orders </a></li>
+              <li><a href="allhistory.php">Order History </a></li>
               <li><a href="adminprofile.php">Our Profile </a></li>
-              <li><a href="process/logoutprocess.php">Log Out</a></li>
+              <li><a href="process/adminlogoutprocess.php">Log Out</a></li>
               
                 
             </ul>

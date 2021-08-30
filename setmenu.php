@@ -28,14 +28,39 @@ include('include/adminheader.php');
         float: left;
 
     }
+    h2{
+        margin-top:50px;
+        text-align:center;
+        font-weight:bold;
+        color:white;
+    }
+    .row{
+        margin-top:-50px;
+    }
+    .error{
+		background:red;
+		/* padding:10px; */
+		width:30%;
+		color:white;
+		border-radius:10px;
+		height:30px;
+		text-align:center;	
+	}
     </style>
 </head>
 <body>
     
 
+<h2>College Canteen Management System</h2>
 
+<?php 
+	if(isset($_GET['msg'])){ ?>
+	<div class="error">
+		<?php echo $_GET['msg']; ?>
+	</div>
+	<?php } ?>
 <div class="container py-5">
-    <div class="row mt-4">
+    <div class="row ">
 
     <?php
     
@@ -63,7 +88,7 @@ include('include/adminheader.php');
                         <h5 class="card-title" name="price"> <?php echo $row['Price'];  ?> </h5>
                         <h5 class="card-title" name="quantity"> <?php echo $row['Quantity']; ?> </h5> -->
                         <button type="submit" class="but bg-primary" name="action" value="set">Set in Menu</button> &nbsp;&nbsp;&nbsp;
-                        <button type="submit" class="but2 bg-danger" name="action" value="remove">Remove</a></button>
+                        <button type="submit" class="but2 bg-danger" name="action" value="remove">Remove</button>
                     </div>
                     </form>
                 </div>

@@ -13,6 +13,9 @@ include('include/adminheader.php');
     <style >
     body{
         background: #4682BF;
+        position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
     }
     
     .img{
@@ -29,15 +32,24 @@ include('include/adminheader.php');
   margin-left: auto;
   margin-right: auto;
     }
+    h2{
+        margin-top:50px;
+        text-align:center;
+        font-weight:bold;
+        color:white;
+    }
+    .row{
+        margin-top:-50px;
+    }
     
     </style>
 </head>
 <body>
     
 
-
+<h2>College Canteen Management System</h2>
 <div class="container py-5">
-    <div class="row mt-4">
+    <div class="row ">
 
     <?php
     
@@ -48,7 +60,7 @@ include('include/adminheader.php');
         while($row=$result->fetch_assoc())
         {
             ?>
-            <div class="col-md-3 mt-3" >
+            <div class="col-md-3 mt-3 binod " >
                 <div class="card">
                     <form action="process/deletemenuprocess.php" Method="POST">
                     <img src="img/<?php echo $row['Photo']; ?>" height="200px" width="200px" value="photo" class="img"><br>

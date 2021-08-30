@@ -41,6 +41,7 @@ include('include/orderheader.php');
         color:white;
     }
     .fname{
+        width: 0%;
         background:grey;
         color:white;
     }
@@ -83,9 +84,7 @@ include('include/orderheader.php');
     
     if($result-> num_rows > 0){
         ?>
-        <div>
-                <p>Orders Cannot be cancelled or updated after 20 minutes.</p>
-            </div>
+        
            
             
           
@@ -93,13 +92,14 @@ include('include/orderheader.php');
                     <div class="hello">
                     <div class="mydiv bg-secondary ">
                       <table>
-                      <th>Food Your Ordered </th>
+                      <th>Food Your Ordered : </th>
                       <tr>
                      <td class="fname">
                      <?php
                      while($row=$result->fetch_assoc())
                      { 
-                         echo $row['Oname']."<br>"; 
+                         echo "Food : ".$row['Oname']; echo "&nbsp;&nbsp; | &nbsp;&nbsp; Rs."; echo "Price : ".$row['Price']; echo "&nbsp;&nbsp; | &nbsp;&nbsp;"; echo "Quantity : ".$row['studentOrder'];echo "&nbsp;&nbsp; | &nbsp;&nbsp;"; echo "Total : ".$row['Price']*$row['studentOrder'];
+                         echo "</br>";
                       } ?> </td>
                       </tr>
                       <tr>

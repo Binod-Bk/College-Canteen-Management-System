@@ -1,18 +1,15 @@
  
  <?php
 
- include('include/adminheader.php');
+ include('include/setfood.php');
  
  ?>
 
-
-<!DOCTYPE html>
-<html lang="en">
     
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <title>Document</title>
+
 
         <style type="text/css">
        body{
@@ -22,8 +19,6 @@
       position: relative;
       display: block;
       width: 90%;
-      height: 100%;
-      margin-top: 50;
       color:white;
     } 
     .field{
@@ -45,35 +40,49 @@
         height: 325px;
     }
     
+    .error{
+		background:red;
+		/* padding:10px; */
+		width:30%;
+		color:white;
+		border-radius:10px;
+		height:30px;
+		text-align:center;	
+	}
+    
     </style>
 
 
 
 </head>
 <body>
+    <h2>College Canteen Management System</h2>
+<?php 
+	if(isset($_GET['msg'])){ ?>
+	<div class="error">
+		<?php echo $_GET['msg']; ?>
+	</div>
+	<?php } ?>
 
 <div class="field">
 	<fieldset class="fieldset" >
 		<legend class="legend"> <h2>Add Food Items</h2> </legend>
-	<form action='process/foodprocess.php' method="post" >
+	<form action='process/foodprocess.php' method="post">
 		
-		Name : <input type=text  class="A" name="name" placeholder="Enter Food Name" required><br><br>
-		Price (Rs.) : <input type=number class="A" min="0" oninput="validity.valid||(value='');" name="price" placeholder="Enter the Price" required><br><br>
+		Name : <input type=text  class="A" name="name" placeholder="Enter Food Name" ><br><br>
+		Price (Rs.) : <input type=number class="A" min="1" oninput="validity.valid||(value='');" name="price" placeholder="Enter the Price" ><br><br>
 		Quantity : <select name="quantity">
 			<option value="per plate">per plate</option>
             <option value="per piece">per piece</option>
             <option value="per cup">per cup</option>
         </select> <br><br>
-        Photo : <input type="file" name="photo" required> <br><br>
+        Photo : <input type="file" name="photo" > <br><br>
         <input type="submit" name="Login" value="Submit">
         <input type="reset" name="Login" value="Reset">
 
 	</form>
 	</fieldset>
             </div> 
-
-
-
     
 </body>
 </html>

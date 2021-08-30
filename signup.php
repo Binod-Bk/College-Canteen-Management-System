@@ -59,7 +59,13 @@
 			width: 30%;
 		}
 
-		
+	.error{
+		background:red;
+		padding:10px;
+		width:30%;
+		color:white;
+		border-radius:10px;
+	}
 	
 		
 	</style>
@@ -69,15 +75,21 @@
 		
 	<h1>College Canteen Management System</h1>
 	
-	
+	<?php 
+	if(isset($_GET['msg'])){ ?>
+	<div class="error">
+		<?php echo $_GET['msg']; ?>
+	</div>
+	<?php } ?>
+
  <div class="mydiv">
 	<form action='process/insertstudent.php' method="post">
 <fieldset border="6px" border-color="black">
 	<legend><h2>Sign Up </h2></legend>
-    Fullname:<input type="text" name="Fullname" placeholder="Enter your Fullname" id="name" required><br><br>
-    Contact:<input type="integer" name="Contact" id="number" placeholder="Enter your contact number" required><br><br>
-    E-mail:<input type="email" name="Email" placeholder="Enter your Gmail" id="name" required><br><br>
-    Password:<input type=password name='password' placeholder="Enter your password" required><br><br>
+    Fullname:<input type="text" name="Fullname" placeholder="Enter your Fullname" id="name" ><br><br>
+    Contact:<input type="integer" name="Contact" id="number" placeholder="Enter your contact number" ><br><br>
+    E-mail:<input type="email" name="Email" placeholder="Enter your Gmail" id="name" ><br><br>
+    Password:<input type=password name='password' placeholder="Enter your password" ><br><br>
 
 <label for ="Subjects">Choose your semester:</label>
 	<select name="semester" >
@@ -134,8 +146,9 @@
 	       	</select> <br><br>
 	       
 
-	       Your Answer: <input type="text" name="ans" required> <br><br>
-    <input type="submit"  name="btnlogin" value='Sign up'>
+	       Your Answer: <input type="text" name="ans" > <br><br>
+		   Choose a Profile : <input type="file" name="img"><br><br>
+    <input type="submit"  name="btnlogin" value='Sign up'><br>
 
 </fieldset>
 </div>

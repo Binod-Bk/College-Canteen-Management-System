@@ -1,0 +1,22 @@
+
+ body{
+    background: #4682BF;
+    position: -webkit-sticky; /* Safari */
+position: sticky;
+top: 0;
+}
+
+.img{
+    display: block;
+margin-left: auto;
+margin-right: auto;
+width: 65%;
+}
+
+.but{
+    background:blue;
+    color:white;
+    display: block;
+margin-left: auto;
+margin-right: auto;
+}

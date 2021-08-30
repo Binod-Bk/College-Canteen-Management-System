@@ -42,74 +42,35 @@ include('include/header.php');
   width: 50%;
 }
  
+.col{
+  background:brown;
+  width: 350px;
+  margin-top:100px;
+  
+}
 
+.canteenheader{
+  margin-top:50px;
+  text-align:center;
+  color:blue;
+}
+h2{
+  text-align:center;
+}
 
-        ul{
-       margin: 0px;
-       padding: 0px;
-       list-style-type: none;
-       color:black;
-       width: auto;
-   }
-   ul li{
-       background-color:black;
-       float: left;
-       width: 200px;
-       height: 40px;
-       color: white;
-       
-       text-align: center;
-       line-height: 40px;
-       font-size: 20px;
-       margin-right: 2px;
-       
-       
-   }
-   ul li a{
-       color:white;
-       text-decoration: none;
-       padding: 5px 20px;
-            border: 1px solid transparent;
-            transition: 0.6s ease ;
-   }
-   ul>li>a:hover{
-       background-color:white;
-       color: black;
-   }
-   ul li ul li:hover{
-       background-color: white;
-       color: black;
-   }
-   ul li ul li{
-       display: none;
-   }
-   ul li:hover ul li{
-       display:block;
-   }
   
 
    
       </style>
       </head>
-      <h1 style="text-align:center" font-size:300px;>ABOUT US</h1>
-      <body>
-
-        
-        
-        <div class="row">
-  <div class="column">
-    <div>
-       <div class="container">
-         <div class="left-box">
+      <body>  
+      <h1 class="canteenheader">College Canteen Management</h1>
       
        <h2> Our Main goal.</h2>
         <p>
         The main objective of the Canteen Management System is to manage the details of Canteen, Sales, Orders, Items, Products. It manages all the information about Canteen, Food, Products, Canteen. The project is totally built at administrative end and thus only the administrator is guaranteed the access. The purpose of the project is to build an application program to reduce the manual work for managing the Canteen, Sales, Food, Orders. It tracks all the details about the Orders, Items, Products.
         </p>
-    </div>
-    </div>
-    </div>
-  </div>
+
 
   
   
@@ -117,14 +78,10 @@ include('include/header.php');
 
 </form>
 </div>
-<div class="col" style="background-color:">
-    <h1>OUR TEAM</h1>
-    <div class="card">
-         <img src="team.jpeg" alt="" style="width:80%" class="center">
-    <h2><p><ul>BINOD B.K</h2></p></ul>
-    <h2><p><ul>SANAYA GHIMIRE</h2></p></ul>
-    
+<div class="col">
+    <h3><u>OUR TEAM</u></h3>
+       
+        <h3>Sanaya Ghimire <br> Binod B.K.</h3>
 
-         </div>
         </body>
 </html>

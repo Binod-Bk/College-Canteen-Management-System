@@ -1,0 +1,30 @@
+
+body{
+      background-image: url('img/q12.png');
+background-repeat: no-repeat;
+background-size: cover;
+position: relative;
+display: block;
+width: 90%;
+height: 100%;
+margin-top: 50;
+color:white;
+} 
+.field{
+ margin-left: 10%;
+      margin-top: 100px;
+      width: 35%;
+      height: 325px;
+      background-color:  rgba(0,0,0,0.3);
+      color: white;
+}
+form{
+ float:right;
+}
+h2{
+ text-align:center;
+}
+.fieldset{
+ border: 1px solid black; 
+ height: 325px;
+}

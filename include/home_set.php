@@ -8,18 +8,10 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
     <!-- <link rel="stylesheet" type="text/css" href="css/header.css"> -->
+    <link rel="stylesheet" href="css/setfooditems.css">
     <title>Hello, world!</title>
     <style type="text/css">
    
-   .main{
-    overflow: hidden;
-  position:fixed;
-  top:0px;
-  width: 100%;
-  float:right;
-  margin: 0px;
-  padding: 0px;
-   }
 
 a{
   			/* display: inline-block; */
@@ -41,7 +33,7 @@ ul{
    ul li{
        background-color:black;
        float: left;
-       width: 180px;
+       width: 172px;
        height: 30px;
        color: white;
        
@@ -78,6 +70,8 @@ ul{
      width:100%;
    }
 
+  
+
 
 
 
@@ -86,7 +80,7 @@ ul{
   <body>
     
 
-      <div class="main fixed-top">
+      <div class="main">
             
             <ul> 
               <li><a href="adminhome.php">Home </a></li>
@@ -95,7 +89,7 @@ ul{
               <li><a href="adminmenu.php">Menu </a></li>
               <li><a href="seeorder.php">See Orders </a></li>
               <li><a href="adminprofile.php">Our Profile </a></li>
-              <li><a href="process/logoutprocess.php">Log Out</a></li>
+              <li><a href="process/adminlogoutprocess.php">Log Out</a></li>
               
                 
             </ul>
