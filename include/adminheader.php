@@ -11,6 +11,7 @@
     <title>Hello, world!</title>
     <style type="text/css">
    
+<<<<<<< HEAD
    .main{
     overflow: hidden;
   position:fixed;
@@ -20,6 +21,8 @@
   margin: 0px;
   padding: 0px;
    }
+=======
+>>>>>>> 6b55e9274cb4344e4e743796b39e56441e5da9fd
 
 a{
   			/* display: inline-block; */

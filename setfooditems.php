@@ -67,10 +67,17 @@
 <div class="field">
 	<fieldset class="fieldset" >
 		<legend class="legend"> <h2>Add Food Items</h2> </legend>
+<<<<<<< HEAD
 	<form action='process/foodprocess.php' method="post">
 		
 		Name : <input type=text  class="A" name="name" placeholder="Enter Food Name" ><br><br>
 		Price (Rs.) : <input type=number class="A" min="1" oninput="validity.valid||(value='');" name="price" placeholder="Enter the Price" ><br><br>
+=======
+	<form action='process/foodprocess.php' method="post" name="myForm" onsubmit="return validateForm()">
+		
+		Name : <input type=text  class="A" name="name" placeholder="Enter Food Name" pattern="[A-Za-z]" title="Name must be in alphabet."><br><br>
+		Price (Rs.) : <input type=number class="A" min="0" oninput="validity.valid||(value='');" name="price" placeholder="Enter the Price" ><br><br>
+>>>>>>> 6b55e9274cb4344e4e743796b39e56441e5da9fd
 		Quantity : <select name="quantity">
 			<option value="per plate">per plate</option>
             <option value="per piece">per piece</option>
@@ -83,6 +90,21 @@
 	</form>
 	</fieldset>
             </div> 
+<<<<<<< HEAD
+=======
+            <script>
+            function validateForm() {
+        var x = document.forms["myForm"]["name"].value;
+        if (x == "") {
+         alert("Name of the food must be filled out");
+            return false;
+                
+  }
+}
+</script>
+
+
+>>>>>>> 6b55e9274cb4344e4e743796b39e56441e5da9fd
     
 </body>
 </html>

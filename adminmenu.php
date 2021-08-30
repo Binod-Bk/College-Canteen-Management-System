@@ -32,6 +32,7 @@ include('include/adminheader.php');
   margin-left: auto;
   margin-right: auto;
     }
+<<<<<<< HEAD
     h2{
         margin-top:50px;
         text-align:center;
@@ -41,6 +42,9 @@ include('include/adminheader.php');
     .row{
         margin-top:-50px;
     }
+=======
+  
+>>>>>>> 6b55e9274cb4344e4e743796b39e56441e5da9fd
     
     </style>
 </head>

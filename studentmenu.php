@@ -49,7 +49,11 @@ include('include/header.php');
         while($row=$result->fetch_assoc())
         {
             ?>
+<<<<<<< HEAD
             <div class="col-md-3 mt-3 " >
+=======
+            <div class="col-md-3 mt-3 position-absolute" >
+>>>>>>> 6b55e9274cb4344e4e743796b39e56441e5da9fd
                 <div class="card align-center bg-info">
                     <form action="process/orderfoodprocess.php" Method="POST">
                     <img src="img/<?php echo $row['Photo']; ?>" height="200px" width="200px" value="photo"class="img" ><br>

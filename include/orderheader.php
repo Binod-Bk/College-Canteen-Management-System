@@ -98,9 +98,14 @@ h3{
   <body>
   <?php
     
+<<<<<<< HEAD
     include('db/connection.php');
     session_start();
     $id=$_SESSION['loginuser'];
+=======
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark position-fixed ">
+  <div class="container-fluid ">
+>>>>>>> 6b55e9274cb4344e4e743796b39e56441e5da9fd
    
     $q = "SELECT * FROM students WHERE id='$id' " ;
     $result = $conn->query($q);
